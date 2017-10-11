@@ -6,7 +6,7 @@ namespace JamiiCS.Models
     public class GroupProject
     {
         [Key]
-        [Column(Order = 2)]
+        [Column(Order = 1)]
         public int GroupId { get; set; }        
         [Key]
         [Column(Order = 2)]

@@ -7,12 +7,17 @@ using System;
 
 namespace JamiiCS.Models
 {
+    
+    public enum Sex
+    {
+        Male,Female
+    }
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Sex { get; set; }
+        public Sex Sex { get; set; }
         public string Pic { get; set; }
         public string Handler { get; set; }
         public string Address { get; set; }
@@ -38,7 +43,6 @@ namespace JamiiCS.Models
         public DbSet<Group> Groups { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<GroupProject> GroupProjects { get; set; }
-        public DbSet<UserProject> UserProject { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
